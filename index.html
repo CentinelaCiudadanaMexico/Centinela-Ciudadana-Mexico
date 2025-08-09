@@ -5,14 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Centinela Ciudadana México, A.C.</title>
 
-<!-- Google Fonts: Montserrat y Open Sans -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
 
 <style>
-  /* Reset y base */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
+  /* Estilos base (igual que antes) */
+  * { margin:0; padding:0; box-sizing: border-box;}
   body {
     font-family: 'Open Sans', sans-serif;
     background: #f9f9f9;
@@ -20,14 +18,10 @@
     display: flex;
     min-height: 100vh;
   }
-
-  /* Contenedor general */
   #container {
     display: flex;
     width: 100%;
   }
-
-  /* Menu lateral */
   nav {
     background: #184d47;
     width: 280px;
@@ -71,8 +65,6 @@
     color: white;
     box-shadow: 0 0 8px #30b395aa;
   }
-
-  /* Contenido principal */
   main {
     margin-left: 280px;
     padding: 40px 50px;
@@ -84,7 +76,6 @@
     min-height: 100vh;
     overflow-y: auto;
   }
-
   main section {
     animation: fadeInContent 0.7s ease forwards;
     opacity: 0;
@@ -94,39 +85,27 @@
     display: block;
     opacity: 1;
   }
-
-  /* Animación de aparición */
   @keyframes fadeInContent {
     from {opacity: 0; transform: translateY(15px);}
     to {opacity: 1; transform: translateY(0);}
   }
-
-  /* Titulos */
   h1, h2 {
     font-family: 'Montserrat', sans-serif;
     color: #184d47;
     margin-bottom: 15px;
   }
-  h1 {
-    font-size: 2.2rem;
-  }
-  h2 {
-    font-size: 1.5rem;
-  }
+  h1 { font-size: 2.2rem;}
+  h2 { font-size: 1.5rem;}
   p {
     line-height: 1.6;
     margin-bottom: 20px;
     color: #3a3a3a;
   }
-
-  /* Lista para valores */
   ul.values-list {
     list-style-type: disc;
     margin-left: 20px;
     color: #2b2b2b;
   }
-
-  /* Footer con redes sociales */
   footer {
     margin-left: 280px;
     background: #184d47;
@@ -150,11 +129,7 @@
   footer .social-icons a:hover {
     color: #30b395;
   }
-
-  /* Íconos - usar FontAwesome CDN */
   @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
-
-  /* Responsive */
   @media (max-width: 800px) {
     nav {
       position: relative;
@@ -193,8 +168,8 @@
   }
 </style>
 </head>
-
 <body>
+
   <div id="container">
 
     <nav>
@@ -236,27 +211,10 @@
           <li>Transparencia: Actuamos con claridad, responsabilidad y apertura en nuestros procesos.</li>
           <li>Empatía: Acompañamos con comprensión y sin juicios.</li>
           <li>Compromiso: Asumimos nuestra responsabilidad ética y social.</li>
-          <li>Acción ciudadana
-</section>
-</main>
+        </ul>
+      </section>
 
-<footer>
-    <div>
-        <a href="mailto:centinelaciudadana.ac@gmail.com" title="Enviar correo">📧 centinelaciudadana.ac@gmail.com</a> |
-        <a href="https://wa.me/5213121228300" target="_blank" rel="noopener" title="WhatsApp">📱 312-122-83-00</a>
-    </div>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/share/173z9WAtVE/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/centinela_ciudadana_ac?igsh=bmhoYnNpNWdvZ2U3&utm_source=qr" target="_blank" rel="noopener" title="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </div>
-    <div>
-        © 2025 Centinela Ciudadana México, A.C. | Todos los derechos reservados
-    </div>
-</footer>
-
-</body>
-</html>
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p><strong>Correo:</strong> <a href="mailto:centinela_ciudadana_ac@gmail.com">centinela_ciudadana_ac@gmail.com</a></p>
+        <p><strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/5213121228300" target="_blank" rel="noopener">+52 312-122-
