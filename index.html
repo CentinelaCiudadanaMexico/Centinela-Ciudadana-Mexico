@@ -1,139 +1,188 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Centinela Ciudadana México, A.C.</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #1b3a57;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      padding: 15px 20px;
-      background-color: #1b3a57;
-      color: white;
-    }
-    header img {
-      height: 70px;
-    }
-    nav {
-      background-color: #2f8f4e;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      padding: 15px 0;
-      font-weight: bold;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 1.1em;
-      padding: 6px 12px;
-      border-radius: 4px;
-      transition: background-color 0.3s ease;
-    }
-    nav a:hover {
-      background-color: #f4c542;
-      color: #1b3a57;
-    }
-    main {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 0 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
-    section {
-      margin-bottom: 30px;
-    }
-    h2 {
-      color: #2f8f4e;
-      border-bottom: 3px solid #f4c542;
-      padding-bottom: 6px;
-      margin-bottom: 12px;
-    }
-    p {
-      line-height: 1.6;
-    }
-    footer {
-      background-color: #1b3a57;
-      color: white;
-      text-align: center;
-      padding: 18px 10px;
-      font-size: 0.9em;
-      margin-top: 40px;
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Centinela Ciudadana México, A.C.</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f8ff;
+    margin: 0; padding: 0;
+    color: #03314b;
+  }
+  header {
+    background: linear-gradient(90deg, #00796b, #004d40);
+    color: #fff;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  header img {
+    height: 60px;
+    border-radius: 8px;
+  }
+  header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+    flex-grow: 1;
+  }
+  nav {
+    background: #004d40;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0; padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  nav ul li {
+    position: relative;
+  }
+  nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #aeea00;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  nav ul li a:hover {
+    background-color: #aeea00;
+    color: #004d40;
+  }
+  section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px 50px 20px;
+    background: white;
+    box-shadow: 0 0 12px rgb(0 0 0 / 0.1);
+    border-radius: 12px;
+  }
+  section h2 {
+    color: #00796b;
+    border-bottom: 3px solid #aeea00;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+  }
+  p, ul {
+    line-height: 1.6;
+    font-size: 1.05rem;
+    color: #03314b;
+  }
+  ul li {
+    margin-bottom: 8px;
+  }
+  footer {
+    background: #00796b;
+    color: #e0f2f1;
+    text-align: center;
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+  /* Scroll smooth */
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
 </head>
 <body>
 
 <header>
-  <img src="logo.png" alt="Logo Centinela" />
+  <img src="logo.png" alt="Logo Centinela Ciudadana México" />
   <h1>Centinela Ciudadana México, A.C.</h1>
 </header>
 
 <nav>
-  <a href="#quienes-somos">Quiénes Somos</a>
-  <a href="#mision">Misión</a>
-  <a href="#vision">Visión</a>
-  <a href="#valores">Valores</a>
-  <a href="#lo-que-buscamos">Lo que Buscamos</a>
+  <ul>
+    <li><a href="#quienes-somos">Quiénes Somos</a></li>
+    <li><a href="#mision">Misión</a></li>
+    <li><a href="#vision">Visión</a></li>
+    <li><a href="#valores">Valores</a></li>
+    <li><a href="#ejes-accion">Ejes de Acción</a></li>
+    <li><a href="#movimiento">Movimiento</a></li>
+    <li><a href="#lo-que-buscamos">Lo que Buscamos</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
 </nav>
 
-<main>
-  <section id="quienes-somos">
-    <h2>Quiénes Somos</h2>
-    <p>Centinela Ciudadana México, A.C. es una asociación civil independiente, apartidista y sin fines de lucro, constituida con el propósito de impulsar acciones concretas para la defensa de los derechos humanos y la atención de comunidades en situación de vulnerabilidad.</p>
-    <p>Nacemos de la necesidad urgente de visibilizar, atender y actuar frente a problemáticas que, por omisión estructural, afectan especialmente a niñas, niños, adolescentes, mujeres, personas mayores y familias en condiciones de riesgo.</p>
-    <p>Nuestra labor tiene un fuerte enfoque en la participación ciudadana, la protección de la infancia y la promoción del interés superior de niñas, niños y adolescentes, así como la vigilancia activa de los intereses colectivos. Creemos firmemente en el poder de la articulación social e institucional para transformar las realidades más urgentes del país.</p>
-    <p>Centinela Ciudadana México, A.C. está integrada por un equipo interdisciplinario de profesionales, voluntarios y aliados comprometidos con la justicia social y el bienestar común. Desde nuestra fundación, trabajamos en el diseño de propuestas que puedan ser llevadas al ámbito legislativo, institucional y comunitario, buscando soluciones reales, sostenibles y con enfoque en derechos.</p>
-  </section>
+<section id="quienes-somos">
+  <h2>¿Quiénes Somos?</h2>
+  <p>
+    Centinela Ciudadana México, A.C. es una asociación civil independiente, apartidista y sin fines de lucro, creada para impulsar acciones concretas en defensa de los derechos humanos y la atención a comunidades vulnerables.
+  </p>
+  <p>
+    Nacemos para visibilizar y actuar frente a problemáticas que afectan especialmente a niñas, niños, adolescentes, mujeres, personas mayores y familias en situación de riesgo, que a menudo son ignoradas por omisiones estructurales.
+  </p>
+  <p>
+    Nuestro trabajo se basa en la participación ciudadana, la protección integral de la infancia y la vigilancia activa de intereses colectivos. Formamos un equipo interdisciplinario de profesionales, voluntarios y aliados comprometidos con la justicia social, enfocados en diseñar propuestas legislativas, institucionales y comunitarias que generen soluciones reales y sostenibles.
+  </p>
+</section>
 
-  <section id="mision">
-    <h2>Misión</h2>
-    <p>Ser un agente de cambio desde la ciudadanía organizada, actuando con ética, firmeza y compromiso en la defensa de los derechos fundamentales, con énfasis en los sectores históricamente invisibilizados. Promovemos la justicia social, la protección integral de las infancias y el fortalecimiento comunitario mediante acciones preventivas, educativas, legales y de acompañamiento humanitario.</p>
-  </section>
+<section id="mision">
+  <h2>Misión</h2>
+  <p>
+    Actuar como un agente de cambio desde la ciudadanía organizada, defendiendo los derechos fundamentales con ética y compromiso, especialmente de sectores históricamente invisibilizados. Promovemos justicia social, protección integral de la niñez y fortalecimiento comunitario mediante acciones preventivas, educativas, legales y de acompañamiento humanitario.
+  </p>
+</section>
 
-  <section id="vision">
-    <h2>Visión</h2>
-    <p>Consolidarnos como una red ciudadana nacional con legitimidad social, capacidad técnica e incidencia efectiva en políticas públicas, decisiones comunitarias y procesos de transformación social. Aspiramos a ser un referente ético e institucional en la vigilancia ciudadana, la exigibilidad de derechos y la reconstrucción del tejido social desde la legalidad, la participación y la solidaridad.</p>
-  </section>
+<section id="vision">
+  <h2>Visión</h2>
+  <p>
+    Ser una red ciudadana nacional reconocida por su legitimidad social, capacidad técnica e incidencia efectiva en políticas públicas, procesos comunitarios y transformaciones sociales. Aspiramos a ser un referente ético e institucional en vigilancia ciudadana, exigibilidad de derechos y reconstrucción del tejido social a través de la legalidad, participación y solidaridad.
+  </p>
+</section>
 
-  <section id="valores">
-    <h2>Valores</h2>
-    <ul>
-      <li><strong>Dignidad humana:</strong> Respeto absoluto a la vida y a la integridad de cada persona.</li>
-      <li><strong>Justicia social:</strong> Promovemos condiciones equitativas para el acceso a derechos y oportunidades.</li>
-      <li><strong>Transparencia:</strong> Actuamos con claridad, responsabilidad y apertura en nuestros procesos.</li>
-      <li><strong>Empatía:</strong> Acompañamos el dolor y las necesidades del otro con comprensión y sin juicios.</li>
-      <li><strong>Compromiso:</strong> Asumimos con seriedad nuestra responsabilidad ética y social.</li>
-      <li><strong>Acción ciudadana:</strong> Creemos en la participación organizada como motor de cambio.</li>
-      <li><strong>Verdad:</strong> Construimos narrativas que dignifican y restituyen voz a quienes han sido silenciados.</li>
-      <li><strong>Solidaridad:</strong> Fomentamos redes de apoyo mutuo, horizontales y humanas.</li>
-    </ul>
-  </section>
+<section id="valores">
+  <h2>Valores</h2>
+  <ul>
+    <li><strong>Dignidad humana:</strong> Respeto absoluto a la vida y la integridad de todas las personas.</li>
+    <li><strong>Justicia social:</strong> Promoción de condiciones equitativas para acceso a derechos y oportunidades.</li>
+    <li><strong>Transparencia:</strong> Claridad y responsabilidad en todos nuestros procesos.</li>
+    <li><strong>Empatía:</strong> Acompañamiento sin juicios, con comprensión genuina.</li>
+    <li><strong>Compromiso:</strong> Responsabilidad ética y social firme.</li>
+    <li><strong>Acción ciudadana:</strong> Participación organizada como motor de cambio.</li>
+    <li><strong>Verdad:</strong> Construcción de narrativas que restituyan voz y dignidad a los silenciados.</li>
+    <li><strong>Solidaridad:</strong> Fomento de redes de apoyo mutuo, horizontales y humanas.</li>
+  </ul>
+</section>
 
-  <section id="lo-que-buscamos">
-    <h2>Lo que Buscamos</h2>
-    <p>Fortalecer nuestra estructura jurídica, operativa y técnica en diálogo con instituciones afines.</p>
-    <p>Establecer vínculos formales de colaboración con el DIF Estatal, Secretarías de Gobierno, fiscalías, congresos locales y otras entidades públicas o privadas.</p>
-    <p>Participar en programas, mesas de trabajo y convocatorias relacionadas con la atención social, la defensa de derechos y la justicia con enfoque en niñez.</p>
-    <p>Ser aliados técnicos en casos de intervención que involucren a niñas, niños, mujeres y grupos vulnerables, aportando análisis, propuestas y acciones sustentadas.</p>
-    <p>Ampliar nuestras redes con aliados estratégicos como legisladores, organismos internacionales, academia y sector empresarial con sentido social.</p>
-  </section>
-</main>
+<section id="ejes-accion">
+  <h2>Ejes de Acción</h2>
+  <ul>
+    <li>Protección y atención integral de niñas, niños y adolescentes en riesgo.</li>
+    <li>Acompañamiento a mujeres víctimas de violencia.</li>
+    <li>Fortalecimiento del tejido comunitario y prevención de la violencia.</li>
+    <li>Activación y articulación de redes ciudadanas para protección y denuncia.</li>
+    <li>Incidencia técnica y colaboración interinstitucional con enfoque en derechos humanos.</li>
+  </ul>
+</section>
+
+<section id="movimiento">
+  <h2>Movimiento Garante del Interés Superior de Niñas, Niños y Adolescentes</h2>
+  <p>
+    Impulsamos esta plataforma ciudadana para visibilizar, atender, canalizar y denunciar casos de violencia y vulneración de derechos hacia la niñez y adolescencia. Su objetivo es dar voz a quienes han sido silenciados, acompañar con ética y profesionalismo, y generar propuestas técnicas para cambios estructurales en las instituciones responsables.
+  </p>
+</section>
+
+<section id="lo-que-buscamos">
+  <h2>Lo que Buscamos</h2>
+  <ul>
+    <li>Fortalecer estructura jurídica, operativa y técnica en diálogo con instituciones afines.</li>
+    <li>Establecer vínculos formales de colaboración con DIF Estatal, Secretarías de Gobierno, fiscalías, congresos y otras entidades.</li>
+    <li>Participar en programas, mesas de trabajo y convocatorias sobre atención social, defensa de derechos y justicia con enfoque en niñez.</li>
+    <li>Ser aliados técnicos en casos de intervención que involucren a niñas, niños, mujeres y grupos vulnerables, aportando análisis, propuestas y acciones sustentadas.</li>
+    <li>Ampliar redes con aliados estratégicos como legisladores, organismos internacionales, academia y sector empresarial con sentido social.</li>
+  </ul>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p><strong>Correo electrónico:</strong> <a href="mailto:centinelaciudadanaac@gmail.com">centinelaciudadanaac@gmail.com</a></p>
+  <p><strong>Teléfono:</strong> 312-122-83-00</p>
+  <p><strong>Ubicación:</strong> Michoacán, México</p>
+</section>
 
 <footer>
-  <p>Contacto: <a href="mailto:centinelaciudadanaac@gmail.com" style="color: #f4c542;">centinelaciudadanaac@gmail.com</a> | Teléfono: 312-122-83-00 | Michoacán, México</p>
-  <p>© 2025 Centinela Ciudadana México, A.C. Todos los derechos reservados.</p>
-</footer>
-
-</body>
-</html>
+  &copy; 2025 Centinela Ciudadana México, A.C. |
