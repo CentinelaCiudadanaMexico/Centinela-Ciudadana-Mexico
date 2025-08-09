@@ -1,185 +1,235 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Centinela Ciudadana México, A.C.</title>
-    <link rel="stylesheet" href="https://kit.fontawesome.com/a076d05399.css" crossorigin="anonymous" />
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            background-color: #004d40;
-            color: white;
-            text-align: center;
-            padding: 15px 10px;
-            position: relative;
-        }
-        header img {
-            height: 70px;
-            vertical-align: middle;
-        }
-        header h1 {
-            display: inline-block;
-            margin: 0 0 0 15px;
-            vertical-align: middle;
-            font-weight: normal;
-            font-size: 1.8em;
-        }
-        .banner {
-            width: 100%;
-            height: 220px;
-            background-image: url('banner.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 2em;
-            font-weight: bold;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        }
-        main {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 15px;
-        }
-        h2 {
-            color: #004d40;
-            margin-top: 40px;
-        }
-        p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        ul {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-        footer {
-            background-color: #004d40;
-            color: white;
-            padding: 20px 10px;
-            text-align: center;
-            font-size: 0.9em;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 10px;
-            font-size: 1.3em;
-        }
-        footer a:hover {
-            color: #80cbc4;
-        }
-        /* Para que los iconos estén bien alineados */
-        .social-icons {
-            margin: 10px 0 15px;
-        }
-        @media(max-width: 500px) {
-            header h1 {
-                display: block;
-                margin: 10px 0 0 0;
-            }
-            .banner {
-                font-size: 1.3em;
-                height: 150px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Centinela Ciudadana México, A.C.</title>
+
+  <!-- Font Awesome para íconos -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-pzw7qT+H1+JUR8b5K3wHGScO+9SvDHwVGx+q9ZTmrLYxmFQvo+p0ITNDvKjDZHUWnRCKDVzUR6qS9A5k0i6vUg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f4f7f8;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      align-items: center;
+    }
+    header {
+      background: #004d40;
+      width: 100%;
+      padding: 20px 0;
+      text-align: center;
+      color: white;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    }
+    header img {
+      height: 80px;
+    }
+    header h1 {
+      margin: 10px 0 0;
+      font-weight: 400;
+    }
+    .contact-icons {
+      margin: 20px 0;
+      display: flex;
+      gap: 25px;
+      font-size: 28px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .contact-icons a {
+      color: #004d40;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .contact-icons a:hover {
+      color: #26a69a;
+    }
+    .contact-icons a span {
+      display: block;
+      font-size: 14px;
+      margin-top: 4px;
+      font-weight: 600;
+    }
+    main {
+      width: 90%;
+      max-width: 700px;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 40px;
+    }
+
+    /* Acordeón estilo */
+    .accordion-item {
+      border-bottom: 1px solid #ddd;
+    }
+    .accordion-header {
+      background: #004d40;
+      color: white;
+      padding: 15px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      user-select: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.1rem;
+      border-radius: 6px 6px 0 0;
+    }
+    .accordion-header:hover {
+      background: #26a69a;
+    }
+    .accordion-header .icon {
+      transition: transform 0.3s ease;
+    }
+    .accordion-header.active .icon {
+      transform: rotate(90deg);
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease;
+      padding: 0 20px;
+      background: #e0f2f1;
+      border-radius: 0 0 6px 6px;
+    }
+    .accordion-content p, .accordion-content ul {
+      margin: 15px 0;
+      line-height: 1.5;
+      color: #004d40;
+    }
+    .accordion-content ul {
+      padding-left: 20px;
+    }
+
+    /* Footer */
+    footer {
+      width: 100%;
+      background: #004d40;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9rem;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.3);
+    }
+    footer a {
+      color: #26a69a;
+      text-decoration: none;
+      margin-left: 10px;
+      font-weight: 600;
+    }
+    footer a:hover {
+      color: #a7ffeb;
+    }
+
+    @media (max-width: 500px) {
+      .accordion-header {
+        font-size: 1rem;
+      }
+      .contact-icons {
+        gap: 15px;
+        font-size: 24px;
+      }
+      footer {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-    <img src="logotipo.png" alt="Logo Centinela Ciudadana México, A.C." />
-    <h1>Centinela Ciudadana México, A.C.</h1>
+  <img src="logotipo.png" alt="Logo Centinela Ciudadana México, A.C." />
+  <h1>Centinela Ciudadana México, A.C.</h1>
 </header>
 
-<section class="banner">
-    Defendiendo derechos, protegiendo vidas
-</section>
+<!-- Íconos de contacto y redes -->
+<div class="contact-icons">
+  <a href="mailto:centinelaciudadana.ac@gmail.com" title="Enviar correo">
+    <i class="fa-solid fa-envelope"></i>
+    <span>Email</span>
+  </a>
+  <a href="https://wa.me/5213121228300" target="_blank" rel="noopener" title="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span>WhatsApp</span>
+  </a>
+  <a href="https://www.facebook.com/share/173z9WAtVE/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">
+    <i class="fa-brands fa-facebook"></i>
+    <span>Facebook</span>
+  </a>
+  <a href="https://www.instagram.com/centinela_ciudadana_ac?igsh=bmhoYnNpNWdvZ2U3&utm_source=qr" target="_blank" rel="noopener" title="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+    <span>Instagram</span>
+  </a>
+  <a href="tel:+5213121228300" title="Llamar">
+    <i class="fa-solid fa-phone"></i>
+    <span>Teléfono</span>
+  </a>
+</div>
 
 <main>
-    <section>
-        <h2>¿Quiénes somos?</h2>
-        <p>Centinela Ciudadana México, A.C. es una asociación civil independiente, apartidista y sin fines de lucro, dedicada a la defensa de los derechos humanos y atención de comunidades en situación de vulnerabilidad.</p>
-        <p>Buscamos visibilizar y atender problemáticas que afectan especialmente a niñas, niños, adolescentes, mujeres, personas mayores y familias en riesgo, promoviendo la participación ciudadana y el interés superior de la niñez y adolescencia.</p>
-    </section>
-
-    <section>
-        <h2>Misión</h2>
-        <p>Ser un agente de cambio desde la ciudadanía organizada, promoviendo justicia social, protección integral de la infancia y fortalecimiento comunitario con acciones preventivas, educativas, legales y de acompañamiento humanitario.</p>
-    </section>
-
-    <section>
-        <h2>Visión</h2>
-        <p>Consolidarnos como una red ciudadana nacional con legitimidad social y capacidad técnica para incidir efectivamente en políticas públicas y procesos de transformación social.</p>
-    </section>
-
-    <section>
-        <h2>Valores</h2>
-        <ul>
-            <li>Dignidad humana</li>
-            <li>Justicia social</li>
-            <li>Transparencia</li>
-            <li>Empatía</li>
-            <li>Compromiso</li>
-            <li>Acción ciudadana</li>
-            <li>Verdad</li>
-            <li>Solidaridad</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Ejes de acción principales</h2>
-        <ul>
-            <li>Atención y protección de niñas, niños y adolescentes en situación de riesgo.</li>
-            <li>Acompañamiento integral a mujeres víctimas de violencia.</li>
-            <li>Fortalecimiento del tejido comunitario y prevención de la violencia.</li>
-            <li>Activación y articulación de redes ciudadanas de protección y denuncia.</li>
-            <li>Incidencia técnica y colaboración interinstitucional con enfoque en derechos humanos.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Movimiento Garante del Interés Superior de NNA</h2>
-        <p>Plataforma ciudadana para visibilizar, atender y denunciar casos de violencia o vulneración de derechos hacia la niñez y adolescencia, con acompañamiento ético y propuestas técnicas para generar cambios estructurales.</p>
-    </section>
-
-    <section>
-        <h2>Lo que buscamos</h2>
-        <ul>
-            <li>Fortalecer nuestra estructura jurídica, operativa y técnica en diálogo con instituciones afines.</li>
-            <li>Establecer vínculos formales de colaboración con entidades públicas y privadas.</li>
-            <li>Participar en programas y mesas de trabajo relacionados con justicia social y defensa de derechos.</li>
-            <li>Ser aliados técnicos en casos de intervención con grupos vulnerables, aportando análisis y propuestas.</li>
-            <li>Ampliar redes con legisladores, organismos internacionales, academia y sector empresarial.</li>
-        </ul>
-    </section>
-</main>
-
-<footer>
-    <div>
-        <a href="mailto:centinelaciudadana.ac@gmail.com" title="Enviar correo">📧 centinelaciudadana.ac@gmail.com</a> |
-        <a href="https://wa.me/5213121228300" target="_blank" rel="noopener" title="WhatsApp">📱 312-122-83-00</a>
+  <div class="accordion-item">
+    <div class="accordion-header">¿Quiénes somos? <i class="icon fa-solid fa-chevron-right"></i></div>
+    <div class="accordion-content">
+      <p>Centinela Ciudadana México, A.C. es una asociación civil independiente, apartidista y sin fines de lucro, dedicada a la defensa de los derechos humanos y atención de comunidades en situación de vulnerabilidad.</p>
+      <p>Buscamos visibilizar y atender problemáticas que afectan especialmente a niñas, niños, adolescentes, mujeres, personas mayores y familias en riesgo, promoviendo la participación ciudadana y el interés superior de la niñez y adolescencia.</p>
     </div>
-    <div class="social-icons">
-        <a href="https://www.facebook.com/share/173z9WAtVE/?mibextid=wwXIfr" target="_blank" rel="noopener" title="Facebook">
-            <i class="fab fa-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/centinela_ciudadana_ac?igsh=bmhoYnNpNWdvZ2U3&utm_source=qr" target="_blank" rel="noopener" title="Instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-    </div>
-    <div>
-        © 2025 Centinela Ciudadana México, A.C. | Todos los derechos reservados
-    </div>
-</footer>
+  </div>
 
-</body>
-</html>
+  <div class="accordion-item">
+    <div class="accordion-header">Misión <i class="icon fa-solid fa-chevron-right"></i></div>
+    <div class="accordion-content">
+      <p>Ser un agente de cambio desde la ciudadanía organizada, promoviendo justicia social, protección integral de la infancia y fortalecimiento comunitario con acciones preventivas, educativas, legales y de acompañamiento humanitario.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">Visión <i class="icon fa-solid fa-chevron-right"></i></div>
+    <div class="accordion-content">
+      <p>Consolidarnos como una red ciudadana nacional con legitimidad social y capacidad técnica para incidir efectivamente en políticas públicas y procesos de transformación social.</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">Valores <i class="icon fa-solid fa-chevron-right"></i></div>
+    <div class="accordion-content">
+      <ul>
+        <li>Dignidad humana</li>
+        <li>Justicia social</li>
+        <li>Transparencia</li>
+        <li>Empatía</li>
+        <li>Compromiso</li>
+        <li>Acción ciudadana</li>
+        <li>Verdad</li>
+        <li>Solidaridad</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <div class="accordion-header">Ejes de acción principales <i class="icon fa-solid fa-chevron-right"></i></div>
+    <div class="accordion-content">
+      <ul>
+        <li>Atención y protección de niñas, niños y adolescentes en situación de riesgo.</li>
+        <li>Acompañamiento integral a mujeres víctimas de violencia.</li>
+        <li>Fortalecimiento del tejido comunitario y prevención de la violencia.</li>
+        <li>Activación y articulación de redes ciudadanas de protección y denuncia.</li>
+        <li>Incidencia técnica y colaboración interinstitucional con enfoque en derechos humanos.</li>
+      </ul>
+    </div>
