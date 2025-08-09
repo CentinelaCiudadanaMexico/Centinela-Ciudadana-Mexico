@@ -5,17 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Centinela Ciudadana México, A.C.</title>
 
-<!-- Google Fonts: Montserrat y Open Sans -->
+<!-- Fuentes -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
 
-<!-- FontAwesome para íconos -->
+<!-- FontAwesome -->
 <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 />
 
 <style>
-  /* Reset y base */
+  /* RESET y base */
   * {
     margin: 0; padding: 0; box-sizing: border-box;
   }
@@ -204,6 +204,20 @@
     display: block;
   }
 
+  /* Contacto */
+  #contacto p {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  #contacto a {
+    color: #30b395;
+    text-decoration: none;
+    font-weight: 700;
+  }
+  #contacto a:hover {
+    text-decoration: underline;
+  }
+
   /* Footer con redes sociales */
   footer {
     margin-left: 280px;
@@ -300,3 +314,31 @@
       gap: 15px;
     }
   }
+</style>
+</head>
+<body>
+
+<!-- Banner -->
+<header id="banner">
+  <div class="banner-content">
+    <img src="logotipo.png" alt="Logo Centinela" class="banner-logo" />
+    <div class="banner-text">
+      <h1>Centinela Ciudadana México, A.C.</h1>
+      <p>Defendiendo los derechos de niñas, niños y adolescentes</p>
+    </div>
+    <div class="banner-buttons">
+      <button id="btnContacto">Contáctanos</button>
+    </div>
+  </div>
+</header>
+
+<!-- Contenedor con menú y contenido -->
+<div id="container">
+  <!-- Menú lateral -->
+  <nav>
+    <img src="logotipo.png" alt="Logo Centinela" />
+    <ul>
+      <li><button class="nav-btn active" data-target="quienes">Quiénes Somos</button></li>
+      <li><button class="nav-btn" data-target="mision">Misión</button></li>
+      <li><button class="nav-btn" data-target="vision">Visión</button></li>
+      <li><button class="nav-btn" data-target="valores">Valores</button></li>
