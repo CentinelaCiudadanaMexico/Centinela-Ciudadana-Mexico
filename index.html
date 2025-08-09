@@ -5,152 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Centinela Ciudadana México, A.C.</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
     body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      background: #f0f5f9;
-      color: #222;
+      font-family: Arial, sans-serif;
+      background: #e9f0f7;
+      color: #0a3d62;
+      margin: 0; padding: 0;
     }
-
     header {
-      background: linear-gradient(90deg, #004d40, #00796b);
+      background: linear-gradient(90deg, #00796b, #4caf50);
       color: white;
       padding: 15px 20px;
-      text-align: center;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 15px;
     }
-
     header img {
       height: 70px;
     }
-
-    header h1 {
-      margin: 0;
-      font-weight: 700;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
     nav {
       background: #004d40;
       display: flex;
       justify-content: center;
       gap: 25px;
       padding: 12px 0;
-      box-shadow: inset 0 -3px 6px rgba(0,0,0,0.3);
     }
-
     nav a {
-      color: #cddc39;
+      color: #a5d6a7;
       text-decoration: none;
-      font-weight: 600;
-      font-size: 1.1rem;
+      font-weight: bold;
+      font-size: 1rem;
       transition: color 0.3s ease;
     }
-
     nav a:hover {
-      color: #ffeb3b;
+      color: #fffde7;
     }
-
     main {
       max-width: 900px;
-      margin: 40px auto 60px;
-      padding: 0 20px;
+      margin: 30px auto;
       background: white;
-      box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-      border-radius: 10px;
+      padding: 25px 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
-
     section {
-      margin-bottom: 45px;
+      margin-bottom: 40px;
     }
-
     h2 {
       color: #00796b;
-      font-size: 1.9rem;
-      margin-bottom: 10px;
-      border-bottom: 3px solid #cddc39;
-      padding-bottom: 8px;
+      border-bottom: 3px solid #4caf50;
+      padding-bottom: 6px;
+      margin-bottom: 18px;
     }
-
-    p {
-      line-height: 1.6;
-      font-size: 1.1rem;
-      color: #444;
-      text-align: justify;
-    }
-
-    ul {
-      color: #444;
-      font-size: 1.1rem;
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 8px;
-    }
-
-    .tarjeta {
-      background: #cddc39;
-      color: #004d40;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.1);
-      max-width: 350px;
-      margin: 0 auto 60px;
-      text-align: center;
-      font-weight: 600;
-      letter-spacing: 1px;
-    }
-
-    .tarjeta h3 {
-      margin: 0 0 5px;
-      font-size: 1.8rem;
-      text-transform: uppercase;
-    }
-
-    .tarjeta p {
-      margin: 4px 0;
-      font-size: 1.1rem;
-    }
-
     footer {
-      text-align: center;
-      padding: 15px;
       background: #004d40;
-      color: #cddc39;
-      font-weight: 500;
-      letter-spacing: 0.7px;
+      color: #a5d6a7;
+      text-align: center;
+      padding: 18px 10px;
       font-size: 0.9rem;
-      box-shadow: inset 0 3px 6px rgba(0,0,0,0.3);
     }
-
-    @media (max-width: 480px) {
-      main {
-        margin: 20px 10px 40px;
-        padding: 15px;
-      }
-      nav {
-        flex-direction: column;
-        gap: 12px;
-      }
-      header {
-        flex-direction: column;
-      }
+    footer a {
+      color: #81c784;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <!-- Cambia "logo.png" por el nombre real de tu archivo logo si lo subes al repositorio -->
   <img src="logo.png" alt="Logo Centinela Ciudadana México" />
   <h1>Centinela Ciudadana México, A.C.</h1>
 </header>
@@ -165,51 +87,74 @@
 </nav>
 
 <main>
-  <section class="tarjeta">
-    <h3>Erika Errejón</h3>
-    <p>Presidenta y Fundadora</p>
-    <p>Tel: 312-122-83-00</p>
-    <p>Email: <a href="mailto:sentinellaciudadanaace.com" style="color:#004d40; font-weight:700;">sentinellaciudadanaace.com</a></p>
-    <p>#Rejon</p>
-  </section>
 
   <section id="mision">
     <h2>Misión</h2>
     <p>
-      Nuestra misión es defender y promover los derechos humanos, en especial de niñas, niños, adolescentes y personas en situación vulnerable, mediante acciones ciudadanas, educación, vinculación interinstitucional y participación social. Buscamos crear espacios de protección integral donde se garantice el respeto, la dignidad y el desarrollo pleno de las personas.
+      En Centinela Ciudadana México, A.C., nuestra misión es proteger y garantizar los derechos de la infancia y de los sectores vulnerables de la sociedad, promoviendo una cultura de respeto, justicia y solidaridad a través de acciones ciudadanas y sociales que generan un impacto positivo y duradero.
     </p>
     <p>
-      Trabajamos con compromiso, ética y profesionalismo para incidir en la transformación social y construir comunidades más justas, equitativas y seguras, promoviendo una cultura de prevención y denuncia que fortalezca el bienestar colectivo.
+      Trabajamos incansablemente para ser un referente confiable y una voz activa que promueve cambios efectivos en políticas públicas y atención especializada para niñas, niños y adolescentes en situación de vulnerabilidad.
     </p>
   </section>
 
   <section id="vision">
     <h2>Visión</h2>
     <p>
-      Ser una asociación civil reconocida a nivel nacional por su liderazgo, transparencia y eficacia en la defensa de los derechos de la infancia, juventud y personas en situación vulnerable. Aspiramos a ser un referente de participación ciudadana, innovación social y colaboración interinstitucional que impulse políticas públicas y acciones concretas para la justicia social.
+      Ser reconocidos a nivel nacional como una asociación civil líder y comprometida con la defensa de los derechos humanos de las infancias y grupos vulnerables, generando un movimiento ciudadano sólido y organizado que influya en la construcción de un México más justo, inclusivo y con oportunidades para todos.
     </p>
     <p>
-      Visualizamos un México donde cada persona pueda vivir en un entorno seguro, con acceso a oportunidades, respeto y protección plena de sus derechos fundamentales.
+      Aspiramos a que nuestras acciones se traduzcan en sistemas de justicia accesibles, sensibles y especializados que garanticen el interés superior de la niñez y adolescencia en todo el país.
     </p>
   </section>
 
   <section id="valores">
     <h2>Valores</h2>
-    <p><strong>Compromiso:</strong> Trabajamos con pasión y responsabilidad para cumplir nuestra misión.</p>
-    <p><strong>Transparencia:</strong> Actuamos con honestidad y claridad en todas nuestras acciones, rindiendo cuentas a la sociedad.</p>
-    <p><strong>Inclusión:</strong> Promovemos la participación y el respeto hacia todas las personas, sin distinción alguna.</p>
-    <p><strong>Solidaridad:</strong> Apoyamos a quienes más lo necesitan con empatía, justicia y equidad.</p>
-    <p><strong>Innovación:</strong> Buscamos continuamente nuevas formas para mejorar y ampliar nuestro impacto social.</p>
-    <p><strong>Respeto:</strong> Valoramos la dignidad humana y fomentamos el respeto en todas nuestras relaciones y acciones.</p>
+    <ul>
+      <li><strong>Compromiso:</strong> Actuamos con responsabilidad y dedicación en la defensa y promoción de los derechos humanos.</li>
+      <li><strong>Transparencia:</strong> Gestionamos nuestros recursos y procesos con honestidad y claridad ante la sociedad.</li>
+      <li><strong>Solidaridad:</strong> Fomentamos la empatía y el apoyo mutuo para construir comunidades fuertes y unidas.</li>
+      <li><strong>Inclusión:</strong> Valoramos y respetamos la diversidad, asegurando que nadie sea excluido por su condición.</li>
+      <li><strong>Respeto:</strong> Promovemos un trato digno y justo para todas las personas, especialmente las más vulnerables.</li>
+    </ul>
   </section>
 
   <section id="quienes-somos">
     <h2>¿Qué es Centinela Ciudadana México, A.C.?</h2>
     <p>
-      Centinela Ciudadana México, A.C. es una asociación civil apartidista, creada para defender y proteger los derechos humanos, con un enfoque especial en niñas, niños, adolescentes y personas en situación vulnerable. Somos un movimiento ciudadano que busca fortalecer la participación social, promover la educación en derechos y generar alianzas estratégicas con instituciones públicas y privadas para lograr un impacto positivo y duradero en nuestra sociedad.
+      Somos una asociación civil conformada por ciudadanos comprometidos con la defensa de los derechos de la niñez, la adolescencia y las personas en situación vulnerable. Nuestra labor es crear espacios de protección y acción social, ofreciendo apoyo integral y promoviendo políticas públicas que favorezcan a estos grupos.
+    </p>
+    <p>
+      Trabajamos desde la sociedad civil para hacer que las voces que muchas veces no son escuchadas tengan eco en las instituciones y la comunidad.
     </p>
   </section>
 
   <section id="que-buscamos">
     <h2>Qué buscamos</h2>
-    <p>Buscamos
+    <p>
+      Buscamos garantizar la protección integral de niñas, niños y adolescentes, fomentando la creación de entornos seguros, justos y libres de violencia. Además, promovemos la donación de sangre, médula ósea y acciones solidarias que contribuyan al bienestar comunitario.
+    </p>
+    <p>
+      Nuestra meta es que cada acción y proyecto fortalezca la participación ciudadana activa y genere un impacto real en la calidad de vida de quienes más lo necesitan.
+    </p>
+  </section>
+
+  <section id="por-que-nacimos">
+    <h2>Por qué nacimos</h2>
+    <p>
+      Centinela Ciudadana México, A.C. nació de la necesidad urgente de visibilizar y atender las problemáticas que enfrentan las infancias y sectores vulnerables en México, ante la falta de respuestas efectivas de las instituciones. Somos un espacio ciudadano que busca construir soluciones desde la sociedad, impulsando la justicia social y el respeto a los derechos humanos.
+    </p>
+    <p>
+      Nuestro sueño es transformar realidades, acompañar procesos de cambio y ser una centinela vigilante y protectora de quienes requieren atención, dignidad y esperanza.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  <p>Contacto: <a href="mailto:sentinellaciudadanaace.com">sentinellaciudadanaace.com</a></p>
+  <p>© 2025 Centinela Ciudadana México, A.C. - Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
