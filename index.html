@@ -5,17 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Centinela Ciudadana México, A.C.</title>
 
-<!-- Fuentes -->
+<!-- Google Fonts: Montserrat y Open Sans -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap" rel="stylesheet" />
 
-<!-- FontAwesome -->
-<link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-/>
-
 <style>
-  /* RESET y base */
+  /* Reset y base */
   * {
     margin: 0; padding: 0; box-sizing: border-box;
   }
@@ -24,70 +18,13 @@
     background: #f9f9f9;
     color: #2b2b2b;
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
-  }
-
-  /* BANNER */
-  #banner {
-    background: linear-gradient(135deg, #184d47, #30b395);
-    color: white;
-    padding: 25px 40px;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    border-radius: 0 0 20px 20px;
-    margin-bottom: 20px;
-  }
-  .banner-content {
-    max-width: 1200px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 25px;
-  }
-  .banner-logo {
-    width: 80px;
-    height: auto;
-    filter: drop-shadow(0 0 3px #00000066);
-  }
-  .banner-text h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 2.5rem;
-    margin-bottom: 8px;
-  }
-  .banner-text p {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 1.3rem;
-    letter-spacing: 0.03em;
-  }
-  .banner-buttons {
-    margin-left: auto;
-  }
-  .banner-buttons button {
-    background: #30b395;
-    border: none;
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border-radius: 30px;
-    cursor: pointer;
-    box-shadow: 0 3px 8px #30b395cc;
-    transition: background-color 0.3s ease;
-  }
-  .banner-buttons button:hover {
-    background: #1f7a6e;
   }
 
   /* Contenedor general */
   #container {
     display: flex;
     width: 100%;
-    flex-grow: 1;
   }
 
   /* Menu lateral */
@@ -149,14 +86,19 @@
   }
 
   main section {
+    animation: fadeInContent 0.7s ease forwards;
     opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 0.6s ease, max-height 0.7s ease;
+    display: none;
   }
   main section.active {
+    display: block;
     opacity: 1;
-    max-height: 2000px; /* suficiente para mostrar todo */
+  }
+
+  /* Animación de aparición */
+  @keyframes fadeInContent {
+    from {opacity: 0; transform: translateY(15px);}
+    to {opacity: 1; transform: translateY(0);}
   }
 
   /* Titulos */
@@ -184,40 +126,6 @@
     color: #2b2b2b;
   }
 
-  /* Noticias - blog */
-  #noticias article {
-    border-bottom: 1px solid #ddd;
-    padding: 15px 0;
-  }
-  #noticias article:last-child {
-    border-bottom: none;
-  }
-  #noticias article h3 {
-    color: #184d47;
-    margin-bottom: 6px;
-  }
-  #noticias article time {
-    font-size: 0.85rem;
-    color: #777;
-    font-style: italic;
-    margin-bottom: 12px;
-    display: block;
-  }
-
-  /* Contacto */
-  #contacto p {
-    font-weight: 600;
-    margin-bottom: 10px;
-  }
-  #contacto a {
-    color: #30b395;
-    text-decoration: none;
-    font-weight: 700;
-  }
-  #contacto a:hover {
-    text-decoration: underline;
-  }
-
   /* Footer con redes sociales */
   footer {
     margin-left: 280px;
@@ -229,7 +137,6 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    user-select: none;
   }
   footer .social-icons {
     display: flex;
@@ -237,46 +144,18 @@
   }
   footer .social-icons a {
     color: #c1e4de;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     transition: color 0.3s;
   }
   footer .social-icons a:hover {
     color: #30b395;
   }
-  footer .footer-text {
-    font-family: 'Montserrat', sans-serif;
-  }
+
+  /* Íconos - usar FontAwesome CDN */
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
   /* Responsive */
   @media (max-width: 800px) {
-    #banner {
-      padding: 20px 15px;
-      border-radius: 0 0 12px 12px;
-      flex-direction: column;
-      text-align: center;
-      gap: 12px;
-    }
-    .banner-content {
-      flex-direction: column;
-      text-align: center;
-      gap: 12px;
-    }
-    .banner-logo {
-      width: 60px;
-    }
-    .banner-text h1 {
-      font-size: 1.8rem;
-    }
-    .banner-text p {
-      font-size: 1.1rem;
-    }
-    .banner-buttons {
-      margin-left: 0;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-    }
     nav {
       position: relative;
       width: 100%;
@@ -284,7 +163,6 @@
       flex-direction: row;
       padding: 15px 20px;
       box-shadow: none;
-      justify-content: space-between;
     }
     nav img {
       margin-bottom: 0;
@@ -295,7 +173,6 @@
       justify-content: center;
       gap: 15px;
       width: auto;
-      flex-wrap: wrap;
     }
     nav ul li {
       margin-bottom: 0;
@@ -316,29 +193,107 @@
   }
 </style>
 </head>
+
 <body>
+  <div id="container">
 
-<!-- Banner -->
-<header id="banner">
-  <div class="banner-content">
-    <img src="logotipo.png" alt="Logo Centinela" class="banner-logo" />
-    <div class="banner-text">
-      <h1>Centinela Ciudadana México, A.C.</h1>
-      <p>Defendiendo los derechos de niñas, niños y adolescentes</p>
-    </div>
-    <div class="banner-buttons">
-      <button id="btnContacto">Contáctanos</button>
-    </div>
+    <nav>
+      <img src="logotipo.png" alt="Centinela Ciudadana México logo" />
+      <ul>
+        <li><button class="active" data-section="quienes">Quiénes Somos</button></li>
+        <li><button data-section="mision">Misión</button></li>
+        <li><button data-section="vision">Visión</button></li>
+        <li><button data-section="valores">Valores</button></li>
+        <li><button data-section="contacto">Contacto</button></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="quienes" class="active">
+        <h1>Quiénes Somos</h1>
+        <p>Centinela Ciudadana México, A.C. es una asociación civil independiente y sin fines de lucro, constituida para impulsar acciones concretas en defensa de los derechos humanos y la atención de comunidades en situación de vulnerabilidad.</p>
+        <p>Nacemos para visibilizar y atender problemáticas que afectan especialmente a niñas, niños, adolescentes, mujeres, personas mayores y familias en condiciones de riesgo. Nuestra labor se enfoca en la participación ciudadana, la protección de la infancia y la vigilancia activa de los intereses colectivos.</p>
+        <p>Estamos integrados por profesionales, voluntarios y aliados comprometidos con la justicia social y el bienestar común, trabajando en propuestas legislativas, institucionales y comunitarias con enfoque en derechos.</p>
+      </section>
+
+      <section id="mision">
+        <h2>Misión</h2>
+        <p>Ser un agente de cambio desde la ciudadanía organizada, actuando con ética, firmeza y compromiso en la defensa de los derechos fundamentales, con énfasis en sectores históricamente invisibilizados.</p>
+        <p>Promovemos la justicia social, la protección integral de las infancias y el fortalecimiento comunitario mediante acciones preventivas, educativas, legales y de acompañamiento humanitario.</p>
+      </section>
+
+      <section id="vision">
+        <h2>Visión</h2>
+        <p>Consolidarnos como una red ciudadana nacional con legitimidad social, capacidad técnica e incidencia efectiva en políticas públicas, decisiones comunitarias y procesos de transformación social.</p>
+        <p>Aspiramos a ser un referente ético e institucional en vigilancia ciudadana, exigibilidad de derechos y reconstrucción del tejido social desde la legalidad, la participación y la solidaridad.</p>
+      </section>
+
+      <section id="valores">
+        <h2>Valores</h2>
+        <ul class="values-list">
+          <li>Dignidad humana: Respeto absoluto a la vida y a la integridad de cada persona.</li>
+          <li>Justicia social: Promovemos condiciones equitativas para el acceso a derechos y oportunidades.</li>
+          <li>Transparencia: Actuamos con claridad, responsabilidad y apertura en nuestros procesos.</li>
+          <li>Empatía: Acompañamos con comprensión y sin juicios.</li>
+          <li>Compromiso: Asumimos nuestra responsabilidad ética y social.</li>
+          <li>Acción ciudadana: Impulsamos la participación activa y organizada para la transformación social.</li>
+          <li>Inclusión: Valoramos la diversidad y promovemos la igualdad de oportunidades para todas las personas.</li>
+          <li>Solidaridad: Fomentamos el apoyo mutuo y el trabajo colectivo en beneficio de la comunidad.</li>
+        </ul>
+      </section>
+
+      <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Para más información, colaboración o dudas, no dudes en comunicarte con nosotros:</p>
+        <ul>
+          <li><strong>Correo electrónico:</strong> contacto@centinela.org.mx</li>
+          <li><strong>Teléfono:</strong> +52 312 122 8300</li>
+          <li><strong>Dirección:</strong> Calle Falsa 123, Colonia Centro, Morelia, Michoacán, México</li>
+        </ul>
+        <p>Síguenos en nuestras redes sociales para estar al tanto de nuestras actividades y campañas:</p>
+        <div class="social-icons">
+          <a href="https://facebook.com/centinela" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/centinela" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com/centinela" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="https://linkedin.com/company/centinela" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </section>
+    </main>
+
   </div>
-</header>
 
-<!-- Contenedor con menú y contenido -->
-<div id="container">
-  <!-- Menú lateral -->
-  <nav>
-    <img src="logotipo.png" alt="Logo Centinela" />
-    <ul>
-      <li><button class="nav-btn active" data-target="quienes">Quiénes Somos</button></li>
-      <li><button class="nav-btn" data-target="mision">Misión</button></li>
-      <li><button class="nav-btn" data-target="vision">Visión</button></li>
-      <li><button class="nav-btn" data-target="valores">Valores</button></li>
+  <footer>
+    <div>© 2025 Centinela Ciudadana México, A.C. Todos los derechos reservados.</div>
+    <div class="social-icons">
+      <a href="https://facebook.com/centinela" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="https://twitter.com/centinela" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/centinela" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com/company/centinela" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    // Cambio de secciones con botones del menú
+    const buttons = document.querySelectorAll('nav ul li button');
+    const sections = document.querySelectorAll('main section');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remover active en botones
+        buttons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        // Mostrar sección correspondiente
+        const target = button.getAttribute('data-section');
+        sections.forEach(section => {
+          if (section.id === target) {
+            section.classList.add('active');
+          } else {
+            section.classList.remove('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
